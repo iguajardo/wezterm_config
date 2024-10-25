@@ -128,8 +128,8 @@ local config = {
     { key = "L", mods = "ALT", action=wezterm.action{AdjustPaneSize={"Right", 5}}},
 
     -- splits
-    { key = "v", mods = "ALT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
-    { key = "x", mods = "ALT", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
+    { key = "x", mods = "ALT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
+    { key = "v", mods = "ALT", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
 
     { key = "H", mods = "CTRL", action=wezterm.action{ActivatePaneDirection="Left"}},
     { key = "J", mods = "CTRL", action=wezterm.action{ActivatePaneDirection="Down"}},
