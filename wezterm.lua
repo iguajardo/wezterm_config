@@ -76,8 +76,8 @@ local config = {
   -- 	   { key = "&", mods = "LEADER|SHIFT", action=wezterm.action{CloseCurrentTab={confirm=true}}},
   -- 	   { key = "x", mods = "LEADER",       action=wezterm.action{CloseCurrentPane={confirm=true}}},
   -- 	   { key = "n", mods="SHIFT|CTRL",     action="ToggleFullScreen" },
-  -- -- 	   { key="v",   mods="CTRL",     action=wezterm.action.PasteFrom 'Clipboard'},
-  -- -- 	   { key="c",   mods="CTRL",     action=wezterm.action.CopyTo 'Clipboard'},
+  	   -- { key="v",   mods="CTRL",     action=wezterm.action.PasteFrom 'Clipboard'},
+  	   -- { key="c",   mods="CTRL",     action=wezterm.action.CopyTo 'Clipboard'},
   -- },
   keys = {
     -- rename tab, ALT+E
@@ -96,6 +96,8 @@ local config = {
         end),
       },
     },
+    { key="V",   mods="CTRL",     action=wezterm.action.PasteFrom 'Clipboard'},
+    { key="C",   mods="CTRL",     action=wezterm.action.CopyTo 'Clipboard'},
     -- move between tabs
     { key = "h", mods = "ALT", action=wezterm.action{ActivateTabRelative=-1}},
     { key = "l", mods = "ALT", action=wezterm.action{ActivateTabRelative=1}},
@@ -129,10 +131,10 @@ local config = {
     { key = "v", mods = "ALT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
     { key = "x", mods = "ALT", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
 
-    { key = "H", mods = "ALT", action=wezterm.action{ActivatePaneDirection="Left"}},
-    { key = "J", mods = "ALT", action=wezterm.action{ActivatePaneDirection="Down"}},
-    { key = "K", mods = "ALT", action=wezterm.action{ActivatePaneDirection="Up"}},
-    { key = "L", mods = "ALT", action=wezterm.action{ActivatePaneDirection="Right"}},
+    { key = "H", mods = "CTRL", action=wezterm.action{ActivatePaneDirection="Left"}},
+    { key = "J", mods = "CTRL", action=wezterm.action{ActivatePaneDirection="Down"}},
+    { key = "K", mods = "CTRL", action=wezterm.action{ActivatePaneDirection="Up"}},
+    { key = "L", mods = "CTRL", action=wezterm.action{ActivatePaneDirection="Right"}},
   },
   set_environment_variables = {},
 }
